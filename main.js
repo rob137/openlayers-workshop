@@ -39,3 +39,6 @@ map.addInteraction(new Draw({
   source: source,
 }));
 map.addInteraction(new Snap({ source }));
+
+const clear = document.getElementById('clear');
+clear.addEventListener('click', () => source.clear());
