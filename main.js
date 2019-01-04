@@ -8,6 +8,7 @@ import sync from 'ol-hashed';
 import DragAndDrop from 'ol/interaction/DragAndDrop';
 import Modify from 'ol/interaction/Modify';
 import Draw from 'ol/interaction/Draw';
+import Snap from 'ol/interaction/Snap';
 
 const map = new Map({
   target: 'map-container',
@@ -37,3 +38,4 @@ map.addInteraction(new Draw({
   type: 'Polygon',
   source: source,
 }));
+map.addInteraction(new Snap({ source }));
